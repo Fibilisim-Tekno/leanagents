@@ -14,8 +14,8 @@ const definitions: Record<Target, { path: string; header: string; source: string
     source: 'https://kiro.dev/docs/steering/', activation: 'Workspace steering; custom agents require explicit resources configuration.' },
   cursor: { path: '.cursor/rules/leanagents.mdc', header: '---\nalwaysApply: true\n---\n\n',
     source: 'https://cursor.com/docs/rules', activation: 'Always-apply project rule.' },
-  antigravity: { path: '.agents/rules/leanagents.md', header: '',
-    source: 'https://antigravity.google/docs/rules-workflows', activation: 'Set activation in the Rules UI or explicitly mention the rule. Activation metadata is not generated.' },
+  antigravity: { path: '.agents/rules/leanagents.md', header: '---\ntrigger: always_on\n---\n\n',
+    source: 'https://antigravity.google/docs/rules-workflows', activation: 'Always On workspace rule (trigger: always_on).' },
 };
 
 export function renderAdapter(targetInput: unknown) {

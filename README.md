@@ -51,7 +51,7 @@ Conflicting files stop setup before writes. Repeating setup does not duplicate i
 
 Published on npm as [`@fibilisim/leanagents`](https://www.npmjs.com/package/@fibilisim/leanagents).
 Run `npx @fibilisim/leanagents setup` for the interactive editor menu.
-Antigravity activation still requires a rule mention or its Rules UI.
+Antigravity setup writes an Always On workspace rule (`trigger: always_on`); no manual activation is required for new installations. Native agent execution remains unverified.
 
 ### Development from source
 

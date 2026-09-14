@@ -16,11 +16,11 @@ describe('editor bundles', () => {
       expect(bundle.files[1]!.content).not.toContain(bundle.files[2]!.content);
     }
   });
-  it('uses documented metadata without inventing Antigravity activation', () => {
+  it('uses target-specific activation metadata', () => {
     expect(matter(renderAdapter('kiro').files[0]!.content).data).toEqual({ inclusion: 'always' });
     expect(matter(renderAdapter('cursor').files[0]!.content).data).toEqual({ alwaysApply: true });
-    expect(matter(renderAdapter('antigravity').files[0]!.content).data).toEqual({});
-    expect(renderAdapter('antigravity').activation).toContain('not generated');
+    expect(matter(renderAdapter('antigravity').files[0]!.content).data).toEqual({ trigger: 'always_on' });
+    expect(renderAdapter('antigravity').activation).toContain('Always On');
     expect(() => renderAdapter('../escape')).toThrow();
   });
   it('preserves existing bundles and exports all referenced files', () => {

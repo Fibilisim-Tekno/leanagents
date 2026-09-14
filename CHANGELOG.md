@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-alpha.3
+
+- Configure Antigravity workspace rules with explicit Always On activation.
+- Update npm quick setup and adapter activation documentation.
+
+
 ## 0.1.0-alpha.2 — 2026-09-14
 
 - Project setup with editor selection, dry-run, conflict checks and repeat-safe installation.
