@@ -13,12 +13,14 @@
   "homepage": "https://github.com/Fibilisim-Tekno/leanagents#readme",
   "keywords": [
     "ai",
-    "agents",
+    "ai-agents",
     "coding-agent",
-    "token-optimization",
-    "claude-code",
+    "code-review",
+    "codex",
     "cursor",
     "kiro",
+    "antigravity",
+    "developer-tools",
     "benchmark"
   ],
   "license": "MIT",
