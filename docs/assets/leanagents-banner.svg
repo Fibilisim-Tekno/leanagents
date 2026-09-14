@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<title id="title">LeanAgents</title><desc id="desc">Focused context. Deliberate review. Verified changes.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101e32"/><stop offset="1" stop-color="#080f1d"/></linearGradient></defs>
+<rect width="1200" height="320" rx="18" fill="url(#bg)"/>
+<path d="M0 319H1200" stroke="#35d0b0" stroke-width="3"/>
+<g font-family="Segoe UI,Arial,sans-serif">
+<text x="58" y="62" fill="#66ddc5" font-size="13" letter-spacing="3">SELECTIVE WORKFLOWS FOR AI CODING</text>
+<text x="54" y="148" fill="#f4f7fb" font-size="70" font-weight="700" letter-spacing="-2">LeanAgents</text>
+<text x="58" y="197" fill="#b6c5d8" font-size="22">Focused context. Deliberate review. Verified changes.</text>
+<text x="58" y="268" fill="#91a6bf" font-size="14" letter-spacing="1">CODEX / KIRO / CURSOR / ANTIGRAVITY</text>
+</g>
+<g fill="none" stroke="#314a65" stroke-width="2"><path d="M885 77L948 155L885 239M1027 77L948 155L1027 239"/><path d="M948 155H1110" stroke="#66ddc5" stroke-width="3"/></g>
+<g fill="#15283c" stroke="#45607c" stroke-width="2"><circle cx="885" cy="77" r="13"/><circle cx="885" cy="239" r="13"/><circle cx="1027" cy="77" r="13"/><circle cx="1027" cy="239" r="13"/></g>
+<circle cx="948" cy="155" r="23" fill="#102f32" stroke="#66ddc5" stroke-width="3"/>
+<circle cx="1110" cy="155" r="13" fill="#66ddc5"/>
+</svg>
