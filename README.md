@@ -45,13 +45,22 @@ node dist/bin.js check
 Offline commands do not call a model. Review and fix commands use the installed
 Codex CLI and consume the authenticated account's quota.
 
-### Export an editor bundle
+### Export a Codex instruction bundle
 
 ```bash
-node dist/bin.js export --target kiro --out ../leanagents-kiro
+node dist/bin.js export --target codex --out ../leanagents-codex
 ```
 
 The destination must be new. Existing editor settings are never overwritten.
+Codex bootstrap loading has been checked with the real CLI. Other editor bundles
+are also available; their current verification is limited to generated formats:
+
+```bash
+node dist/bin.js export --target kiro --out ../leanagents-kiro
+node dist/bin.js export --target cursor --out ../leanagents-cursor
+node dist/bin.js export --target antigravity --out ../leanagents-antigravity
+```
+
 See [adapter support and activation](docs/ADAPTERS.md).
 
 ### Try a bounded fix
