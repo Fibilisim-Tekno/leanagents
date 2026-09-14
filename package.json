@@ -29,7 +29,7 @@
     "node": ">=22.12.0"
   },
   "bin": {
-    "leanagents": "./dist/bin.js"
+    "leanagents": "dist/bin.js"
   },
   "main": "./dist/index.js",
   "files": [
