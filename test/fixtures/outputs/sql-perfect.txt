@@ -1,0 +1,9 @@
+[critical] search() builds SQL by concatenating the caller's term
+input.ts:25
+Trigger: a term containing a single quote, for example `%' or 1=1 --`
+Consequence: arbitrary SQL executes with the application's database role, so any
+row in any table the role can reach is readable.
+Fix: parameterise the term and the limit, as findByEmail already does with $1.
+
+critical 1, high 0, medium 0, low 0
+changes requested

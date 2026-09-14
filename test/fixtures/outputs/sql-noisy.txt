@@ -1,0 +1,20 @@
+[critical] SQL injection through string concatenation in search()
+input.ts:25
+Trigger: a term containing a quote character.
+Consequence: arbitrary SQL execution.
+Fix: use a parameterised query with a placeholder.
+
+[low] Debug console.log left in the repository
+input.ts:23
+Trigger: any call to search().
+Consequence: noise in production logs.
+Fix: remove the console.log statement.
+
+[low] Missing JSDoc on exported methods
+input.ts:11
+Trigger: reading the code later.
+Consequence: harder to understand.
+Fix: add documentation comments.
+
+critical 1, high 0, medium 0, low 2
+changes requested

@@ -1,0 +1,5 @@
+The repository code could be improved. There is a query that might be a problem
+depending on how it is called. Consider reviewing the database access layer for
+robustness and adding tests.
+
+approve

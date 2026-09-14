@@ -10,6 +10,7 @@ bench/runs/
 .env
 .env.*
 *.tgz
-outputs/
+/outputs/
 PLAN.md
 bench/PLAN-before-orchestration.md
+

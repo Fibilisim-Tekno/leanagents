@@ -1,0 +1,20 @@
+[high] Unsafe non-null assertion on input.page
+input.ts:17
+Trigger: a caller passing an object without page.
+Consequence: possible null dereference at runtime.
+Fix: remove the assertion and narrow explicitly.
+
+[medium] Magic number used as the default page size
+input.ts:19
+Trigger: reading the code.
+Consequence: the value 20 is unexplained.
+Fix: extract a constant.
+
+[low] No tests accompany this module
+input.ts:1
+Trigger: future changes.
+Consequence: regressions go unnoticed.
+Fix: add unit tests.
+
+critical 0, high 1, medium 1, low 1
+changes requested

@@ -1,0 +1,7 @@
+[critical] SQL injection risk from string concatenation
+input.ts:3
+Trigger: hostile input reaching the query builder.
+Consequence: arbitrary SQL execution.
+Fix: parameterise the value.
+
+changes requested
