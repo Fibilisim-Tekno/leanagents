@@ -1,0 +1,37 @@
+{
+  "id": "stale-effect-dependency",
+  "language": "typescript",
+  "file": "input.tsx",
+  "summary": "A component whose effect reads customerId but declares an empty dependency array, so it never refetches.",
+  "defects": [
+    {
+      "id": "missing-effect-dependency",
+      "line": 34,
+      "lineTolerance": 14,
+      "severity": "high",
+      "summary": "The effect reads customerId but its dependency array is empty, so changing customer keeps the first customer's invoices",
+      "keywordGroups": [
+        ["dependency array", "dependencies", "deps", "customerid"],
+        ["missing", "empty", "stale", "not refetch", "never refetch", "does not refetch", "won't refetch"]
+      ]
+    },
+    {
+      "id": "index-as-key",
+      "line": 40,
+      "lineTolerance": 4,
+      "severity": "medium",
+      "summary": "Array index used as the React key for a list that is replaced wholesale when the customer changes",
+      "keywordGroups": [
+        ["key", "index"],
+        ["reorder", "index as key", "unstable", "invoice.id", "stable key", "identity"]
+      ]
+    }
+  ],
+  "distractors": [
+    {
+      "id": "inline-arrow-in-jsx",
+      "summary": "Inline arrow functions and inline map callbacks in JSX are normal React, not a defect.",
+      "keywordGroups": [["inline arrow", "arrow function in jsx", "usecallback", "memoize the callback"]]
+    }
+  ]
+}

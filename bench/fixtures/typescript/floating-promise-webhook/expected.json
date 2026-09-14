@@ -1,0 +1,26 @@
+{
+  "id": "floating-promise-webhook",
+  "language": "typescript",
+  "file": "input.ts",
+  "summary": "A webhook handler that awaits one async call and leaves a second one unawaited with no rejection handler.",
+  "defects": [
+    {
+      "id": "floating-promise",
+      "line": 27,
+      "lineTolerance": 4,
+      "severity": "high",
+      "summary": "notifyDownstream is called without await or a catch, so a rejection becomes an unhandled rejection",
+      "keywordGroups": [
+        ["notifydownstream", "await", "promise"],
+        ["unhandled", "float", "not awaited", "missing await", "without await", "catch", "rejection"]
+      ]
+    }
+  ],
+  "distractors": [
+    {
+      "id": "magic-number-retries",
+      "summary": "MAX_RETRIES is a named constant already, so calling it a magic number is noise.",
+      "keywordGroups": [["magic number", "hardcoded number", "hard-coded number"]]
+    }
+  ]
+}

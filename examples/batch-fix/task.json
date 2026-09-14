@@ -1,0 +1,7 @@
+{
+  "task": {"kind":"fix","scope":"typescript","risk":"normal","behaviorChange":true},
+  "request": "Fix batch so it preserves every input item, in order, in consecutive groups of size. Keep rejection of invalid sizes and avoid mutating the input. This example is dependency-free TypeScript. The supplied tests must not change.",
+  "files": ["batch.ts", "batch.test.ts"],
+  "editable": ["batch.ts"],
+  "tests": ["batch.test.ts"]
+}

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+
+# Benchmark run artifacts (agent outputs are local, results are committed selectively)
+bench/runs/
+
+.env
+.env.*
+*.tgz
+outputs/
+PLAN.md
+bench/PLAN-before-orchestration.md

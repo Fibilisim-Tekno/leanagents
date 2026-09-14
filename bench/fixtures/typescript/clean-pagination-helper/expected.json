@@ -1,0 +1,28 @@
+{
+  "id": "clean-pagination-helper",
+  "language": "typescript",
+  "file": "input.ts",
+  "summary": "Correct pagination helpers. The right review outcome is zero findings and an approve.",
+  "clean": true,
+  "defects": [],
+  "distractors": [
+    {
+      "id": "non-null-assertions",
+      "summary": "The non-null assertions are guarded by Number.isInteger checks on the same line, so they are safe.",
+      "keywordGroups": [
+        ["non-null assertion", "definite assignment", "bang operator"],
+        ["unsafe", "could be undefined", "remove the assertion", "possible null", "may be undefined"]
+      ]
+    },
+    {
+      "id": "magic-default-page-size",
+      "summary": "A literal default page size of 20 inside a normalising function. Obvious in context.",
+      "keywordGroups": [["magic number", "hardcoded 20", "extract constant"]]
+    },
+    {
+      "id": "missing-tests",
+      "summary": "Absence of tests in the fixture is an artefact of the fixture, not a defect in the code.",
+      "keywordGroups": [["no tests", "missing tests", "add unit tests", "untested"]]
+    }
+  ]
+}

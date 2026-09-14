@@ -1,0 +1,37 @@
+{
+  "id": "float-money-totals",
+  "language": "typescript",
+  "file": "input.ts",
+  "summary": "Money handled as floating point, and a discount percentage parsed without a radix or a NaN check.",
+  "defects": [
+    {
+      "id": "float-money",
+      "line": 12,
+      "lineTolerance": 10,
+      "severity": "high",
+      "summary": "Currency amounts are accumulated as floating point, so totals drift by fractions of a penny",
+      "keywordGroups": [
+        ["float", "floating point", "rounding", "precision", "ieee"],
+        ["money", "currency", "cents", "minor unit", "integer", "decimal library", "bigint"]
+      ]
+    },
+    {
+      "id": "parseint-nan",
+      "line": 26,
+      "lineTolerance": 4,
+      "severity": "high",
+      "summary": "parseInt has no radix and the result is never checked for NaN, so an unknown code produces NaN and corrupts the total",
+      "keywordGroups": [
+        ["parseint", "nan", "radix"],
+        ["not checked", "no radix", "unchecked", "isnan", "number.isnan", "invalid code", "guard"]
+      ]
+    }
+  ],
+  "distractors": [
+    {
+      "id": "hardcoded-currency-symbol",
+      "summary": "A hardcoded currency symbol in a formatting helper. Worth changing one day, not a defect.",
+      "keywordGroups": [["hardcoded currency", "currency symbol", "internationali", "localisation", "localization", "i18n"]]
+    }
+  ]
+}

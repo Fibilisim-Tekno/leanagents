@@ -1,0 +1,37 @@
+{
+  "id": "leaked-error-detail",
+  "language": "typescript",
+  "file": "input.ts",
+  "summary": "An error handler returns the internal message and stack to the client, and logs the request body.",
+  "defects": [
+    {
+      "id": "internal-error-to-client",
+      "line": 22,
+      "lineTolerance": 5,
+      "severity": "high",
+      "summary": "The internal error message and stack are sent in the response body, handing an attacker reconnaissance",
+      "keywordGroups": [
+        ["stack", "error message", "internal detail", "err.message"],
+        ["leak", "expose", "disclos", "client", "reconnaissance", "generic message", "do not return"]
+      ]
+    },
+    {
+      "id": "logging-request-body",
+      "line": 18,
+      "lineTolerance": 4,
+      "severity": "high",
+      "summary": "The whole request body is logged, and this route receives a password field",
+      "keywordGroups": [
+        ["log", "logger"],
+        ["password", "secret", "credential", "sensitive", "pii", "redact"]
+      ]
+    }
+  ],
+  "distractors": [
+    {
+      "id": "any-in-catch",
+      "summary": "`catch (error: unknown)` is already correct here; complaining about catch typing is noise.",
+      "keywordGroups": [["catch (error: any)", "any type in catch", "avoid any"]]
+    }
+  ]
+}

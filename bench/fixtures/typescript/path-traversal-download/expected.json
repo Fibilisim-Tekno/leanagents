@@ -1,0 +1,37 @@
+{
+  "id": "path-traversal-download",
+  "language": "typescript",
+  "file": "input.ts",
+  "summary": "A download endpoint joins a user-supplied name onto an upload root without confirming the result stays inside it.",
+  "defects": [
+    {
+      "id": "path-traversal",
+      "line": 15,
+      "lineTolerance": 5,
+      "severity": "critical",
+      "summary": "The query parameter is joined onto UPLOAD_ROOT with no containment check, so ../ escapes the upload directory",
+      "keywordGroups": [
+        ["path traversal", "directory traversal", "../", "escape", "outside"],
+        ["resolve", "containment", "startswith", "normali", "basename", "sanitiz", "validate the path", "confine"]
+      ]
+    },
+    {
+      "id": "header-injection-filename",
+      "line": 23,
+      "lineTolerance": 3,
+      "severity": "medium",
+      "summary": "The unsanitised name is interpolated into a Content-Disposition header value",
+      "keywordGroups": [
+        ["content-disposition", "header"],
+        ["inject", "unsanit", "escape", "quote", "crlf", "unescaped"]
+      ]
+    }
+  ],
+  "distractors": [
+    {
+      "id": "sync-fs-call",
+      "summary": "existsSync in a request path is a minor style choice here, not a behavioural defect worth blocking on.",
+      "keywordGroups": [["existssync", "synchronous", "blocking call", "use async fs"]]
+    }
+  ]
+}

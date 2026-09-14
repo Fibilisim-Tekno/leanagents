@@ -1,0 +1,37 @@
+{
+  "id": "unvalidated-cast-config",
+  "language": "typescript",
+  "file": "input.ts",
+  "summary": "Remote JSON is asserted into a typed shape without validation, next to an idiomatic loose null check.",
+  "defects": [
+    {
+      "id": "unvalidated-type-assertion",
+      "line": 19,
+      "lineTolerance": 4,
+      "severity": "high",
+      "summary": "Remote JSON is cast with `as RemoteConfig` instead of validated, so a shape change fails later and elsewhere",
+      "keywordGroups": [
+        ["as remoteconfig", "type assertion", "cast", "casting"],
+        ["validat", "parse", "schema", "zod", "runtime check", "not verified", "no guarantee", "unchecked"]
+      ]
+    },
+    {
+      "id": "missing-response-ok-check",
+      "line": 16,
+      "lineTolerance": 4,
+      "severity": "medium",
+      "summary": "response.ok is never checked, so an error page body is parsed and cached as configuration",
+      "keywordGroups": [
+        ["response.ok", "status code", "http status", "ok check"],
+        ["not checked", "missing", "never check", "unchecked", "error response"]
+      ]
+    }
+  ],
+  "distractors": [
+    {
+      "id": "loose-equality-null",
+      "summary": "`cached != null` is the idiomatic way to cover null and undefined together. Not a defect.",
+      "keywordGroups": [["==", "!=", "loose equality", "strict equality", "use ==="]]
+    }
+  ]
+}

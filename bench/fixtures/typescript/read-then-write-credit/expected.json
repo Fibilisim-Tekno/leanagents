@@ -1,0 +1,26 @@
+{
+  "id": "read-then-write-credit",
+  "language": "typescript",
+  "file": "input.ts",
+  "summary": "Wallet credit is read, checked, then overwritten with an absolute value, with no transaction or conditional update.",
+  "defects": [
+    {
+      "id": "lost-update-race",
+      "line": 35,
+      "lineTolerance": 8,
+      "severity": "critical",
+      "summary": "Read, check and write are not atomic, so two concurrent spends both pass the balance check and one update is lost",
+      "keywordGroups": [
+        ["race", "concurrent", "atomic", "interleav", "lost update", "simultaneous"],
+        ["transaction", "conditional update", "where credit_cents", "select for update", "lock", "decrement", "credit_cents ="]
+      ]
+    }
+  ],
+  "distractors": [
+    {
+      "id": "error-strings",
+      "summary": "Throwing Error with a plain message is fine here. Demanding custom error classes is a preference.",
+      "keywordGroups": [["custom error class", "error subclass", "typed error", "domain error class"]]
+    }
+  ]
+}

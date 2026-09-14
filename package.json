@@ -1,0 +1,73 @@
+{
+  "name": "leanagents",
+  "version": "0.1.0-alpha.1",
+  "description": "Selective coding workflows with context budgets, bounded TypeScript fixes, and recorded test and review results.",
+  "author": "Fibilisim Tekno",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fibilisim-Tekno/leanagents.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fibilisim-Tekno/leanagents/issues"
+  },
+  "homepage": "https://github.com/Fibilisim-Tekno/leanagents#readme",
+  "keywords": [
+    "ai",
+    "agents",
+    "coding-agent",
+    "token-optimization",
+    "claude-code",
+    "cursor",
+    "kiro",
+    "benchmark"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "bin": {
+    "leanagents": "./dist/bin.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "sources",
+    "README.md",
+    "LICENSE",
+    "leanagents.config.json",
+    "bench/fixtures",
+    "bench/METHODOLOGY.md",
+    "bench/PILOT-2026-09-14.md",
+    "bench/SNAPSHOT-SMOKE-2026-09-14.md",
+    "docs",
+    "examples/batch-fix",
+    "bench/FIX-SMOKE-2026-09-14.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx src/bin.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check:all": "npm run typecheck && npm run lint && npm run test"
+  },
+  "dependencies": {
+    "commander": "15.0.0",
+    "gpt-tokenizer": "4.0.0",
+    "gray-matter": "4.0.3",
+    "zod": "4.6.4"
+  },
+  "devDependencies": {
+    "@types/node": "26.5.1",
+    "eslint": "10.10.0",
+    "tsx": "4.23.13",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.70.0",
+    "vitest": "4.1.11"
+  }
+}

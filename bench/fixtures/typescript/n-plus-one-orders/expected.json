@@ -1,0 +1,31 @@
+{
+  "id": "n-plus-one-orders",
+  "language": "typescript",
+  "file": "input.ts",
+  "summary": "Order loading issues one query per order row, alongside an exhaustive switch that is not a defect.",
+  "defects": [
+    {
+      "id": "n-plus-one-query",
+      "line": 41,
+      "lineTolerance": 6,
+      "severity": "high",
+      "summary": "A query per order row inside the loop, so round trips scale with the number of orders",
+      "keywordGroups": [
+        ["n+1", "n + 1", "query in a loop", "query inside the loop", "per row", "per order", "round trip"],
+        ["join", "batch", "single query", "one query", "in (", "where order_id in", "dataloader"]
+      ]
+    }
+  ],
+  "distractors": [
+    {
+      "id": "long-switch",
+      "summary": "An exhaustive switch over a union type. Length is not complexity and it is not a defect.",
+      "keywordGroups": [["too long", "long function", "extract the switch", "reduce complexity", "cyclomatic"]]
+    },
+    {
+      "id": "missing-jsdoc",
+      "summary": "Exported functions without JSDoc. A style preference, not a behavioural defect.",
+      "keywordGroups": [["jsdoc", "missing documentation", "add documentation comment"]]
+    }
+  ]
+}

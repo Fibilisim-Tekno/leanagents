@@ -1,0 +1,26 @@
+{
+  "id": "sql-injection-user-lookup",
+  "language": "typescript",
+  "file": "input.ts",
+  "summary": "A repository with one correctly parameterised query and one built by string concatenation.",
+  "defects": [
+    {
+      "id": "sql-injection",
+      "line": 25,
+      "lineTolerance": 5,
+      "severity": "critical",
+      "summary": "search() concatenates the caller-supplied term into the SQL string instead of parameterising it",
+      "keywordGroups": [
+        ["sql", "query", "statement"],
+        ["injection", "concatenat", "parameteri", "parameterize", "prepared", "placeholder", "$1"]
+      ]
+    }
+  ],
+  "distractors": [
+    {
+      "id": "debug-console-log",
+      "summary": "A console.log left in a repository method. Untidy, not a defect that changes behaviour.",
+      "keywordGroups": [["console.log", "console log", "debug log", "debug statement", "logging statement"]]
+    }
+  ]
+}

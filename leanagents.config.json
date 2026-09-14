@@ -1,0 +1,21 @@
+{
+  "budgets": {
+    "agentBodyLines": 120,
+    "agentBodyTokens": 1300,
+    "agentDescriptionTokens": 60,
+    "ruleLines": 200,
+    "ruleTokens": 1500,
+    "sharedTokens": 500,
+    "referenceTokens": 3000,
+    "allAgentDescriptionTokens": 15000,
+    "startupTokens": 20000
+  },
+  "notes": {
+    "allAgentDescriptionTokens": "Experimental local description-pool budget; not a universal harness limit.",
+    "ruleLines": "Cursor documents a 500-line guideline for rule files. 200 keeps output well inside it and leaves room for generated harness wrappers.",
+    "agentDescriptionTokens": "Per-description local policy; actual startup loading depends on the target harness.",
+    "agentBodyLines": "Experimental compactness target; exceeding it does not prove the agent is poor quality.",
+    "referenceTokens": "Reference files load only when an agent asks for them, so detail is affordable here. This is where depth belongs.",
+    "startupTokens": "Budget for the assumed loading model, not observed or billed session usage."
+  }
+}

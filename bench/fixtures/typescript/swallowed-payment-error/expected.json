@@ -1,0 +1,37 @@
+{
+  "id": "swallowed-payment-error",
+  "language": "typescript",
+  "file": "input.ts",
+  "summary": "A payment failure is logged and then ignored, so the order is marked paid with an empty charge id.",
+  "defects": [
+    {
+      "id": "swallowed-error-marks-paid",
+      "line": 31,
+      "lineTolerance": 6,
+      "severity": "critical",
+      "summary": "The catch logs and continues, so a failed charge still reaches markPaid and the order is recorded as paid",
+      "keywordGroups": [
+        ["catch", "swallow", "logs and continues", "ignored", "caught"],
+        ["marked paid", "markpaid", "still", "continues", "rethrow", "re-throw", "return early", "propagate"]
+      ]
+    },
+    {
+      "id": "empty-charge-id",
+      "line": 33,
+      "lineTolerance": 4,
+      "severity": "high",
+      "summary": "chargeId stays an empty string on the failure path and is persisted as if it were a real charge reference",
+      "keywordGroups": [
+        ["chargeid", "charge id", "empty string"],
+        ["empty", "\"\"", "unset", "blank", "falsy", "no charge"]
+      ]
+    }
+  ],
+  "distractors": [
+    {
+      "id": "let-reassignment",
+      "summary": "chargeId uses let because it is reassigned. Suggesting const here would be wrong.",
+      "keywordGroups": [["prefer const", "use const instead", "should be const"]]
+    }
+  ]
+}
