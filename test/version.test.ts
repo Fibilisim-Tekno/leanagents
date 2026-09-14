@@ -16,7 +16,7 @@ describe('package metadata', () => {
   });
 
   it('reports the package name declared in package.json', () => {
-    expect(getPackageName()).toBe('leanagents');
+    expect(getPackageName()).toBe('@fibilisim/leanagents');
     expect(getPackageName()).toBe(manifestFromDisk().name);
   });
 

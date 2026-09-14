@@ -9,6 +9,7 @@ import { registerPrepareCommand } from './commands/prepare.js';
 import { registerReviewCommand } from './commands/review.js';
 import { registerFixCommand } from './commands/fix.js';
 import { registerExportCommand } from './commands/export.js';
+import { registerSetupCommand } from './commands/setup.js';
 
 /**
  * Builds the CLI command tree. Kept free of side effects so tests can
@@ -34,6 +35,7 @@ export function buildProgram(): Command {
   registerReviewCommand(program);
   registerFixCommand(program);
   registerExportCommand(program);
+  registerSetupCommand(program);
 
   return program;
 }

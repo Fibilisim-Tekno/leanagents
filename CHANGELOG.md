@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.2 — 2026-09-14
+
+- Project setup with editor selection, dry-run, conflict checks and repeat-safe installation.
+- Preserve Codex instructions with a marked block and backup.
+- Scoped package metadata and prebuilt GitHub release installation.
+- npm registry publication remains pending.
+
+
 ## 0.1.0-alpha.1 — 2026-09-14
 
 Initial public alpha.

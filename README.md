@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/Fibilisim-Tekno/leanagents/actions/workflows/ci.yml/badge.svg)](https://github.com/Fibilisim-Tekno/leanagents/actions/workflows/ci.yml)
 
-**Active development · v0.1.0-alpha.1 · MIT**
+**Active development · v0.1.0-alpha.2 · MIT**
 
 LeanAgents is a selective coding workflow for AI coding assistants. It uses explicit task scope and risk to load only the instructions, references and review steps a task actually needs.
 
@@ -37,6 +37,23 @@ See [adapter support and activation](docs/ADAPTERS.md).
 ## Quick start
 
 Runtime: Node.js 22.12+. Development: Node.js 22.13+ or 24+.
+
+Run inside your project (no clone or build required):
+
+```bash
+npx --yes --package=https://github.com/Fibilisim-Tekno/leanagents/releases/download/v0.1.0-alpha.2/fibilisim-leanagents-0.1.0-alpha.2.tgz leanagents setup --target codex
+```
+
+Replace `codex` with `kiro`, `cursor`, or `antigravity`. Omit `--target` for
+an editor selection menu. Use `--dry-run` to preview or `--dir` for another project.
+Setup preserves existing Codex instructions with a marked block and backup.
+Conflicting files stop setup before writes. Repeating setup does not duplicate it.
+
+The intended npm command is `npx @fibilisim/leanagents setup --target codex`.
+The npm package is not published yet; use the GitHub release command above.
+Antigravity activation still requires a rule mention or its Rules UI.
+
+### Development from source
 
 ```bash
 git clone https://github.com/Fibilisim-Tekno/leanagents.git
@@ -86,7 +103,7 @@ On Windows, `--codex-js` can point to the installed Codex CLI JavaScript entrypo
 
 ## Verification
 
-- 169 local tests pass together with type checking, lint and compilation.
+- 173 local tests pass together with type checking, lint and compilation.
 - GitHub Actions checks Ubuntu and Windows on Node 22 and 24.
 - A constructed reviewer smoke test found a known TypeScript defect and produced no finding after the host-side correction.
 - A constructed bounded-fix smoke test moved from two failing tests to 3/3 passing, then passed a separate review and guarded apply.

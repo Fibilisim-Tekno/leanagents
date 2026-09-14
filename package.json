@@ -1,6 +1,6 @@
 {
-  "name": "leanagents",
-  "version": "0.1.0-alpha.1",
+  "name": "@fibilisim/leanagents",
+  "version": "0.1.0-alpha.2",
   "description": "Selective coding workflows with context budgets, bounded TypeScript fixes, and recorded test and review results.",
   "author": "Fibilisim Tekno",
   "repository": {
@@ -71,5 +71,8 @@
     "typescript": "6.0.3",
     "typescript-eslint": "8.70.0",
     "vitest": "4.1.11"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
