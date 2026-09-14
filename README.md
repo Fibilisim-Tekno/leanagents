@@ -41,7 +41,7 @@ Runtime: Node.js 22.12+. Development: Node.js 22.13+ or 24+.
 Run inside your project (no clone or build required):
 
 ```bash
-npx --yes --package=https://github.com/Fibilisim-Tekno/leanagents/releases/download/v0.1.0-alpha.2/fibilisim-leanagents-0.1.0-alpha.2.tgz leanagents setup --target codex
+npx @fibilisim/leanagents setup --target codex
 ```
 
 Replace `codex` with `kiro`, `cursor`, or `antigravity`. Omit `--target` for
@@ -49,8 +49,8 @@ an editor selection menu. Use `--dry-run` to preview or `--dir` for another proj
 Setup preserves existing Codex instructions with a marked block and backup.
 Conflicting files stop setup before writes. Repeating setup does not duplicate it.
 
-The intended npm command is `npx @fibilisim/leanagents setup --target codex`.
-The npm package is not published yet; use the GitHub release command above.
+Published on npm as [`@fibilisim/leanagents`](https://www.npmjs.com/package/@fibilisim/leanagents).
+Run `npx @fibilisim/leanagents setup` for the interactive editor menu.
 Antigravity activation still requires a rule mention or its Rules UI.
 
 ### Development from source
