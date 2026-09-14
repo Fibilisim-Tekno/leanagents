@@ -125,3 +125,5 @@ node dist/bin.js check
 ```
 
 See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), [CHANGELOG.md](CHANGELOG.md) and the [`bench/`](bench/) directory. Licensed under [MIT](LICENSE).
+
+<!-- ci-trigger: 2026-09-14 -->
